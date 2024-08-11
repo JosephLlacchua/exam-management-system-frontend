@@ -1,0 +1,27 @@
+.footer-container {
+  margin:auto;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.footer-column {
+  flex: 1;
+  text-align: center;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+.copyright {
+  text-align: center;
+}
+.bold-text {
+  font-weight: bold;
+}
+
+.link{
+  cursor: pointer;
+}

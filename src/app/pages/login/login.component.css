@@ -1,0 +1,41 @@
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 25px;
+}
+.username, .password{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.password{
+  margin-bottom: 36px;
+}
+
+.password p{
+  width: 80%;
+  text-align: left;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+
+
+button{
+
+  margin-bottom: 12px;
+}
+
+

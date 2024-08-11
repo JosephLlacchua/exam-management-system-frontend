@@ -1,0 +1,15 @@
+.text-center {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}
+
+
+.card{
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border-radius: 25px;
+}

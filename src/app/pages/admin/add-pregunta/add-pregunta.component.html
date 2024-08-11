@@ -1,0 +1,80 @@
+<div class="bootstrap-wrapper">
+  <div class="row mt20">
+    <div class="col-md-12">
+      <h1>Agregar preguntas a <span style="font-weight: bold;">{{ exam.title }}</span></h1>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-subtitle>
+            Digite los detalles de la nueva pregunta
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <form class="mt20" (submit) = "formSubmit()">
+            <mat-form-field class="w100">
+              <mat-label>Digite el contenido de la pregunta</mat-label>
+              <textarea rows="8" matInput placeholder="Escribe aquí" name="contenido" [(ngModel)] = "question.content"></textarea>
+            </mat-form-field>
+
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite la opción 1</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    name="opcion1"
+                    [(ngModel)] = "question.option1">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite la opción 2</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    name="opcion2"
+                    [(ngModel)] = "question.option2">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite la opción 3</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    name="opcion3"
+                    [(ngModel)] = "question.option3">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite la opción 4</mat-label>
+                  <input
+                    type="text"
+                    matInput
+                    name="opcion4"
+                    [(ngModel)] = "question.option4">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <mat-form-field class="w100">
+              <mat-label>Seleccione la respuesta</mat-label>
+              <mat-select [(ngModel)] = "question.correctAnswer" name="respuesta">
+                <mat-option *ngIf = "question.option1" [value] = "question.option1">{{ question.option1 }}</mat-option>
+                <mat-option *ngIf = "question.option2" [value] = "question.option2">{{ question.option2 }}</mat-option>
+                <mat-option *ngIf = "question.option3" [value] = "question.option3">{{ question.option3 }}</mat-option>
+                <mat-option *ngIf = "question.option4" [value] = "question.option4">{{ question.option4 }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <div class="container text-center">
+              <button mat-raised-button color="primary">Guardar</button>
+            </div>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,23 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.toolbar {
+  background: #1282d3;
+}
+
+.icon-white {
+  color: white;
+}
+
+.span-white {
+  color: white;
+}
+
+.example-icon {
+  margin-right: 10px;
+}
+
+.favorite-icon {
+  margin-right: 10px;
+}

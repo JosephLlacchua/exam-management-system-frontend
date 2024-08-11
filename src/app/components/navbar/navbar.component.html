@@ -1,0 +1,27 @@
+<mat-toolbar class="toolbar">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <a routerLink="/home"><mat-icon class="icon-white">menu_books</mat-icon></a>
+  </button>
+  <span class="span-white">Portal de exámenes</span>
+  <span class="example-spacer"></span>
+  <ng-container *ngIf="isLoggedIn; else loggedOutTemplate">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with user icon" (click)="navigateToProfile()">
+      <mat-icon class="icon-white">account_circle</mat-icon>
+    </button>
+    <span class="span-white">{{ user?.username }}</span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with logout icon" (click)="logout()">
+      <mat-icon class="icon-white">logout</mat-icon>
+    </button>
+    <span class="span-white">Cerrar sesión</span>
+  </ng-container>
+  <ng-template #loggedOutTemplate>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with login icon">
+      <a routerLink="/login"><mat-icon class="icon-white">login</mat-icon></a>
+    </button>
+    <span class="span-white">Iniciar sesión</span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with signup icon">
+      <a routerLink="/signup"><mat-icon class="icon-white">person_add</mat-icon></a>
+    </button>
+    <span class="span-white">Registrarse</span>
+  </ng-template>
+</mat-toolbar>
