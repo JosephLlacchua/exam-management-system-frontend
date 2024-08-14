@@ -63,7 +63,7 @@ export class AddPreguntaComponent implements OnInit {
   ngOnInit(): void {
     this.exam.id = this.route.snapshot.params['examId'];  //esto es para obtener el id del examen
     this.exam.title = this.route.snapshot.params['title'];
-    this.question.examId = this.exam.id;  // Correct assignment
+    this.question.examId = this.exam.id;
   }
 
   formSubmit(): void {

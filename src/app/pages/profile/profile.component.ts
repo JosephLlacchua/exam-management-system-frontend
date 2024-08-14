@@ -54,8 +54,8 @@ export class ProfileComponent implements OnInit {
         const userId = this.userApiService.getUserId();
         this.userApiService.updateUser(userId, this.user).subscribe(updatedUser => {
           this.user = updatedUser;
-          Swal.fire('Actualizado', 'El perfil ha sido actualizado.', 'success').then(() => {
-            window.location.reload();
+          Swal.fire('Actualizado', 'El perfil ha sido actualizado. Por favor, vuelva a iniciar sesión por motivos de seguridad.', 'success').then(() => {
+            this.userApiService.logout();
           } );
           });
       }

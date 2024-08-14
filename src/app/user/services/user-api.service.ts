@@ -64,14 +64,12 @@ export class UserApiService extends BaseService<User> {
     return false;
   }
 
-  updateUser(id: number, user: User): Observable<User> {
-    return this.http.put<User>(`${this.buildPath()}/${id}`, user, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    updateUser(id: number, user: User): Observable<User> {
+    return this.update(id, user);
   }
 
   deleteUser(userId: number): Observable<User> {
-    return this.http.delete<User>(`${this.buildPath()}/${userId}`, this.httpOptions)
-      .pipe(catchError(this.handleError));
+    return this.delete(userId);
   }
 
   getUser() {
@@ -85,5 +83,9 @@ export class UserApiService extends BaseService<User> {
       }
     }
     return null;
+  }
+
+  getId() {
+    return undefined;
   }
 }

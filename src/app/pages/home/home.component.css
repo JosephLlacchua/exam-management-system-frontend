@@ -1,0 +1,80 @@
+h1, h2, h3, h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+.bg-primary {
+  background-color: #007bff !important;
+}
+
+.bg-success {
+  background-color: #28a745 !important;
+}
+
+.bg-info {
+  background-color: #17a2b8 !important;
+}
+
+.bg-warning {
+  background-color: #ffc107 !important;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+}
+
+.rounded-lg {
+  border-radius: 1rem !important;
+}
+
+img.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+
+a.nav-link:hover {
+  color: #ffc107 !important;
+}
+
+a.nav-link {
+  transition: color 0.3s ease;
+}
+
+.hero{
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://th.bing.com/th/id/OIG3.urg2BLBPBeDNNctmCvdl?w=1024&h=1024&rs=1&pid=ImgDetMain");
+  background-size: cover;
+  background-position: center;
+  min-height: calc(100vh - 64px);
+}
+
+.content{
+  min-height: calc(100vh - 128px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style: none;
+  padding: 50px 0;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  color: white;
+
+}

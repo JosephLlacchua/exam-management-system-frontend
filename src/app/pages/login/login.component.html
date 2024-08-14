@@ -1,38 +1,23 @@
-<div class="bootstrap-wrapper">
-  <div class="container">
-    <div class="row mt20">
-      <div class="col-md-6 offset-md-3">
-        <mat-card class="card">
-          <div class="container text-center">
-            <img src="assets/login.png" width="100" height="100" alt="img-login">
-          </div>
-
-          <h3 class="text-center">Inicio de sesión</h3>
-          <form (ngSubmit)="login()" class="form-login">
-            <div class="username">
-              <mat-form-field class="full-width" appearance="outline">
-                <mat-label>Nombre de usuario</mat-label>
-                <input name="username" required [(ngModel)]="userData.username" matInput
-                       placeholder="Digite su nombre de usuario">
-                <mat-hint>El nombre de usuario debe ser valido</mat-hint>
-              </mat-form-field>
-            </div>
-            <div class="password">
-              <mat-form-field class="full-width" appearance="outline">
-                <mat-label>Contraseña</mat-label>
-                <input name="password" required [(ngModel)]="userData.password" type="password" matInput
-                       placeholder="Digite su contraseña">
-                <mat-hint>La contraseña debe ser valida</mat-hint>
-              </mat-form-field>
-            </div>
-
-
-            <div class="container text-center">
-              <button mat-flat-button color="primary">Registrarse</button>
-              <button type="reset" style="margin-left: 20px;" mat-raised-button color="warn">Limpiar</button>
-            </div>
-          </form>
-        </mat-card>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="rounded-box row">
+    <div class="left-side col-md-6 d-flex justify-content-center align-items-center">
+      <img src="assets/login-image-1.png" alt="loginimage" class="img-fluid">
+    </div>
+    <div class="right-side col-md-6 d-flex justify-content-center align-items-center">
+      <div class="form-container">
+        <img src="assets/logoApp.png" alt="logoapp" class="img-fluid mb-3">
+        <p *ngIf="errorMessage !== ''" class="text-danger">{{errorMessage}}</p>
+        <mat-form-field class="w-100">
+          <mat-label>Username</mat-label>
+          <input matInput [(ngModel)]="userData.username">
+        </mat-form-field>
+        <mat-form-field class="w-100">
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" [(ngModel)]="userData.password">
+        </mat-form-field>
+        <button mat-raised-button class="login-button btn btn-primary w-100 mt-3" (click)="login()">Iniciar sesión</button>
+        <p class="forgot-password mt-3" (click)="redirectToPasswordRecovery()">¿Olvidaste tu contraseña?</p>
+        <a class="create-account mt-2" (click)="redirectToSignin()">Crear cuenta</a>
       </div>
     </div>
   </div>

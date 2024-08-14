@@ -10,6 +10,7 @@ import Swal from 'sweetalert2';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router, RouterLink } from "@angular/router";
 import { UserApiService } from "../../user/services/user-api.service";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-login',
@@ -21,7 +22,8 @@ import { UserApiService } from "../../user/services/user-api.service";
     MatInputModule,
     RouterLink,
     ReactiveFormsModule,
-    MatCardModule
+    MatCardModule,
+    NgIf,
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
@@ -32,6 +34,7 @@ export class LoginComponent implements OnInit {
     "username": '',
     "password": ''
   };
+  errorMessage: string = '';
 
   constructor(
     private authApi: AuthenticationApiService,
@@ -84,5 +87,13 @@ export class LoginComponent implements OnInit {
         });
       }
     );
+  }
+
+  redirectToPasswordRecovery() {
+    this.router.navigate(['/password-recovery']);
+  }
+
+  redirectToSignin() {
+    this.router.navigate(['/signup']);
   }
 }

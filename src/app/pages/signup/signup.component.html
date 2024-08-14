@@ -1,49 +1,43 @@
-<div class="bootstrap-wrapper">
-  <div class="container">
-    <div class="row" style="margin-top : 20px;">
-      <div class="col-md-6 offset-md-3">
-        <mat-card class="card">
-          <div class="container text-center">
-            <img src="assets/icon.png" alt="loginimage" width="100" height="100">
-          </div>
-
-          <h3 class="text-center">Registrate aqui</h3>
-
-          <form (ngSubmit)="formSubmit()">
-            <mat-form-field class="full-width" appearance="outline">
-              <mat-label>Nombre de usuario</mat-label>
-              <input required [(ngModel)]="user.username" name="username" matInput
-                     placeholder="Dijite su nombre de usuario">
-            </mat-form-field>
-            <mat-form-field class="full-width" appearance="outline">
-              <mat-label>Contraseña</mat-label>
-              <input required [(ngModel)]="user.password" name="password" type="password" matInput
-                     placeholder="Dijite su contraseña">
-            </mat-form-field>
-            <mat-form-field class="full-width" appearance="outline">
-              <mat-label>Nombre</mat-label>
-              <input [(ngModel)]="user.name" name="nombre" matInput placeholder="Dijite su nombre">
-            </mat-form-field>
-            <mat-form-field class="full-width" appearance="outline">
-              <mat-label>Apellido</mat-label>
-              <input [(ngModel)]="user.lastname" name="apellidos" matInput placeholder="Dijite su apellido">
-            </mat-form-field>
-            <mat-form-field class="full-width" appearance="outline">
-              <mat-label>Email</mat-label>
-              <input [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Dijite su email">
-            </mat-form-field>
-            <mat-form-field class="full-width" appearance="outline">
-              <mat-label>Telefono</mat-label>
-              <input [(ngModel)]="user.phone" name="telefono" matInput placeholder="Dijite su telefono">
-            </mat-form-field>
-
-            <div class="container text-center">
-              <button mat-flat-button color="primary">Registrarse</button>
-              <button type="reset" style="margin-left: 20px;" mat-raised-button color="warn">Limpiar</button>
-            </div>
-          </form>
-        </mat-card>
-
+<div class="container d-flex justify-content-center align-items-center vh-100">
+  <div class="rounded-box row">
+    <div class="left-side col-md-6 d-flex justify-content-center align-items-center">
+      <img src="assets/signin-image-1.png" alt="loginimage" class="img-fluid">
+    </div>
+    <div class="right-side col-md-6 d-flex justify-content-center align-items-center">
+      <div class="form-container">
+        <img src="assets/logoApp.png" alt="logoapp" width="200px" height="176px">
+        <mat-form-field>
+          <mat-label>Nombre</mat-label>
+          <input matInput [(ngModel)]="user.name" #name="ngModel" required minlength="3" maxlength="20">
+          <mat-error *ngIf="name.invalid && name.touched">Por favor, introduce un nombre válido.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Apellido</mat-label>
+          <input matInput [(ngModel)]="user.lastname" #lastname="ngModel" required minlength="3" maxlength="20">
+          <mat-error *ngIf="lastname.invalid && lastname.touched">Por favor, introduce un apellido válido.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Correo</mat-label>
+          <input matInput [(ngModel)]="user.email" #email="ngModel" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+          <mat-error *ngIf="email.invalid && email.touched">Por favor, introduce un correo válido.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Username</mat-label>
+          <input matInput [(ngModel)]="user.username" #username="ngModel" required minlength="8">
+          <mat-error *ngIf="username.invalid && username.touched">Por favor, introduce un nombre de usuario válido.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Contraseña</mat-label>
+          <input matInput type="password" [(ngModel)]="user.password" #password="ngModel" required minlength="8">
+          <mat-error *ngIf="password.invalid && password.touched">Por favor, introduce una contraseña válida.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Telefono</mat-label>
+          <input matInput [(ngModel)]="user.phone" #phone="ngModel" required minlength="3" maxlength="20">
+          <mat-error *ngIf="phone.invalid && phone.touched">Por favor, introduce un teléfono válido.</mat-error>
+        </mat-form-field>
+        <button mat-raised-button class="register" (click)="signUp()">Registrarse</button>
+        <a class="have-account" (click)="redirectToLogin()">Ya tengo cuenta</a>
       </div>
     </div>
   </div>

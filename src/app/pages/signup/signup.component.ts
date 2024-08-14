@@ -1,15 +1,15 @@
 import {Component, OnInit} from '@angular/core';
-import  Swal  from 'sweetalert2';
+import Swal from 'sweetalert2';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
-import { RouterLink } from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 import { MatButtonModule } from '@angular/material/button';
-import {MatSnackBar,} from '@angular/material/snack-bar';
+import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatCard} from "@angular/material/card";
 import {AuthenticationApiService} from "../services/authentication-api.service";
 import {User} from "../../user/model/user.model";
-
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-signup',
@@ -22,6 +22,7 @@ import {User} from "../../user/model/user.model";
     ReactiveFormsModule,
     MatButtonModule,
     MatCard,
+    NgIf,
   ],
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
@@ -31,15 +32,13 @@ export class SignupComponent implements OnInit {
 
   constructor(
     private authService: AuthenticationApiService,
-    private snack: MatSnackBar
+    private snack: MatSnackBar,
+    private router: Router
   ) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
 
-
-  }
-
-  formSubmit() {
+  signUp() {
     if (this.user.username.trim() === '' || this.user.password.trim() === '') {
       this.snack.open('El nombre de usuario y la contraseña son requeridos !!', 'Aceptar', {
         duration: 3000,
@@ -51,7 +50,16 @@ export class SignupComponent implements OnInit {
 
     this.authService.signUp(this.user.username, this.user.password, this.user.name, this.user.lastname, this.user.email, this.user.phone, ['ROLE_USER']).subscribe(
       (data) => {
-        Swal.fire('Usuario guardado','Usuario registrado con exito en el sistema','success');
+        Swal.fire({
+          title: 'Usuario guardado',
+          text: 'Usuario registrado con exito en el sistema',
+          icon: 'success',
+          confirmButtonText: 'OK'
+        }).then((result) => {
+          if (result.isConfirmed) {
+            this.redirectToLogin();
+          }
+        });
       },
       (error) => {
         this.snack.open('Ha ocurrido un error en el sistema !!', 'Aceptar', {
@@ -61,5 +69,9 @@ export class SignupComponent implements OnInit {
         });
       }
     );
+  }
+
+  redirectToLogin() {
+    this.router.navigate(['/login']);
   }
 }

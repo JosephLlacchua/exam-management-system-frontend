@@ -1,10 +1,110 @@
-<div class="bootstrap-wrapper">
-  <div class="container">
-    <div class="row mt20">
-      <div class = "col-md-6 offset-md-3 text-center">
-        <h1>Bienvenido al portal de examenes</h1>
-        <button mat-raised-button color = "primary">Inicio</button>
+<div class="bg-light text-dark min-vh-100 font-sans">
+  <header class="bg-dark py-4 px-6">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <h1 class="h2 font-weight-bold text-white">Examify</h1>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a (click)="scrollToSection('home')" class="nav-link text-white">Home</a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollToSection('features')" class="nav-link text-white">Features</a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollToSection('planes')" class="nav-link text-white">Plans</a>
+            </li>
+            <li class="nav-item">
+              <a (click)="scrollToSection('testimonios')" class="nav-link text-white">Testimonials</a>
+            </li>
+            <button class="btn btn-warning font-weight-bold" routerLink="/login">Sign In</button>
+          </ul>
+        </div>
       </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <div id="home" class="content">
+      <h2 class="h3 font-weight-bold text-center mb-4">Welcome to Examify</h2>
+      <p style="color: white">Revolutionizing exam management for teachers and students.</p>
     </div>
   </div>
+
+  <section class="bg-primary text-white py-12 px-4 text-center">
+    <div class="container" id="features">
+      <h3 class="h4 font-weight-bold mb-4">For Teachers</h3>
+      <p class="mb-4">Effortlessly create and manage exams with our intuitive platform.</p>
+      <img src="assets/img_profesores.png" alt="Teacher Image" class="img-fluid rounded shadow-lg mb-4">
+    </div>
+  </section>
+
+  <section class="bg-success text-white py-12 px-4 text-center">
+    <div class="container">
+      <h3 class="h4 font-weight-bold mb-4">For Students</h3>
+      <p class="mb-4">Take exams and track your progress with ease.</p>
+      <img src="assets/pic-cta-progress.png" alt="Student Image" class="img-fluid rounded shadow-lg mb-4">
+    </div>
+  </section>
+
+  <section class="container py-12 px-4 text-center" id="planes">
+    <h3 class="h4 font-weight-bold text-center mb-4">Premium Plans</h3>
+    <p class="lead text-secondary mb-6">Unlock additional benefits with our Premium plans.</p>
+    <div class="d-flex justify-content-center">
+      <div class="bg-info text-white p-4 rounded-lg text-center mx-2 flex-fill shadow-lg">
+        <h4 class="font-weight-bold mb-2">Premium Plan 1</h4>
+        <p>Feature 1</p>
+        <p>Feature 2</p>
+        <button class="mt-4 btn btn-warning">Choose Plan</button>
+      </div>
+      <div class="bg-warning text-white p-4 rounded-lg text-center mx-2 flex-fill shadow-lg">
+        <h4 class="font-weight-bold mb-2">Premium Plan 2</h4>
+        <p>Feature 1</p>
+        <p>Feature 2</p>
+        <button class="mt-4 btn btn-dark">Choose Plan</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-12 px-4">
+    <h3 class="h4 font-weight-bold text-center mb-4" id="testimonios">Testimonials</h3>
+    <div class="row">
+      <div class="col-md-6 mb-4">
+        <div class="bg-light p-6 rounded-lg shadow-sm">
+          <p>"As a teacher, Examify has made exam creation a breeze. Highly recommended!"</p>
+          <p class="text-secondary mt-2">- John Doe, Teacher</p>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4">
+        <div class="bg-light p-6 rounded-lg shadow-sm">
+          <p>"I love using Examify to track my progress and improve my performance."</p>
+          <p class="text-secondary mt-2">- Jane Smith, Student</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-dark py-12 px-4 text-center text-white">
+    <h3 class="h4 font-weight-bold mb-4">Ready to get started?</h3>
+    <div>
+      <button class="btn btn-warning mr-4" routerLink="/signup">Sign Up for Free Trial</button>
+      <button class="btn btn-secondary">Purchase Premium Plan</button>
+    </div>
+  </section>
+
+  <footer class="bg-dark py-4 px-6 text-white d-flex justify-content-between align-items-center">
+    <ul class="nav">
+      <li class="nav-item"><a href="#" class="nav-link text-white">Privacy Policy</a></li>
+      <li class="nav-item"><a href="#" class="nav-link text-white">Contact</a></li>
+    </ul>
+    <div>
+      <a href="#" class="text-white mr-4"><i class="fab fa-facebook"></i></a>
+      <a href="#" class="text-white mr-4"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#" class="text-white"> <i class="fab fa-instagram"></i></a>
+    </div>
+  </footer>
 </div>
