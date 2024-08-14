@@ -90,7 +90,7 @@ export class LoginComponent implements OnInit {
   }
 
   redirectToPasswordRecovery() {
-    this.router.navigate(['/password-recovery']);
+    this.router.navigate([]);
   }
 
   redirectToSignin() {

@@ -1,5 +1,5 @@
 .rounded-box {
-  max-width: 800px; /* Reduce the maximum size of the container */
+  max-width: 750px;
   border: 1px solid #000;
   border-radius: 20px;
   background: rgb(255, 255, 255);
@@ -9,7 +9,7 @@
 }
 
 .left-side img, .right-side img {
-  max-width: 80%; /* Adjust the size of the images */
+  max-width: 80%;
 }
 
 .form-container {
@@ -18,7 +18,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding: 10px; /* Reduce the padding of the form container */
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .login-button {
-  max-width: 150px; /* Reduce the size of the button */
+  max-width: 150px;
   height: 50px;
   font-size: 16px;
   background: linear-gradient(90deg, rgba(25,69,107,1) 0%, rgba(49,135,209,1) 100%);

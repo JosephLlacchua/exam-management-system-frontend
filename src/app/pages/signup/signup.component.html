@@ -1,4 +1,4 @@
-<div class="container d-flex justify-content-center align-items-center vh-100">
+<div class="container d-flex justify-content-center align-items-center vh-100 mt-lg-4">
   <div class="rounded-box row">
     <div class="left-side col-md-6 d-flex justify-content-center align-items-center">
       <img src="assets/signin-image-1.png" alt="loginimage" class="img-fluid">
@@ -36,7 +36,7 @@
           <input matInput [(ngModel)]="user.phone" #phone="ngModel" required minlength="3" maxlength="20">
           <mat-error *ngIf="phone.invalid && phone.touched">Por favor, introduce un teléfono válido.</mat-error>
         </mat-form-field>
-        <button mat-raised-button class="register" (click)="signUp()">Registrarse</button>
+        <button mat-raised-button class="login-button btn btn-primary w-100 mt-3" (click)="signUp()">Registrarse</button>
         <a class="have-account" (click)="redirectToLogin()">Ya tengo cuenta</a>
       </div>
     </div>
