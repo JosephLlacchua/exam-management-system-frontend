@@ -5,6 +5,9 @@ import {RouterLink} from "@angular/router";
 import {MatActionList, MatListItem, MatListSubheaderCssMatStyler} from "@angular/material/list";
 import {NgForOf} from "@angular/common";
 import {UserApiService} from "../services/user-api.service";
+import {CategoryApiService} from "../../services/category-api.service";
+import {Category} from "../../pages/model/category.model";
+import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
   selector: 'app-sidebar-user',
@@ -21,13 +24,30 @@ import {UserApiService} from "../services/user-api.service";
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.css'
 })
-export class SidebarComponent implements OnInit{
-  constructor(public login:UserApiService) { }
+export class SidebarComponent implements OnInit {
+  categories: Category[] = [];
 
-  ngOnInit(): void {
+  constructor(
+    public login: UserApiService,
+    public categoriesService: CategoryApiService,
+    public snack: MatSnackBar
+  ) {
   }
 
-  public logout(){
+  ngOnInit(): void {
+    this.categoriesService.getAllCategories().subscribe(
+      (data: any) => {
+        this.categories = data;
+      }, error => {
+        this.snack.open('Error al cargar las categorías', '', {
+          duration: 3000
+        })
+        console.log(error);
+      }
+    )
+  }
+
+  public logout() {
     this.login.logout();
     window.location.reload();
   }

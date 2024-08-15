@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card class="mt-3">
   <mat-action-list>
     <div mat-subheader>Menu</div>
     <button routerLink = "/user-dashboard" mat-list-item>
@@ -8,8 +8,11 @@
       <mat-icon mat-list-icon>account_circle</mat-icon> Perfil
     </button>
     <div mat-subheader>Categorías disponibles</div>
-    <button routerLink="/user-dashboard/exams" mat-list-item>
-      <mat-icon mat-list-icon>quiz</mat-icon>Exámenes
+    <button routerLink="/user-dashboard/exams-user" mat-list-item>
+      <mat-icon mat-list-icon>quiz</mat-icon> Exámenes
+    </button>
+    <button [routerLink] = "'/user-dashboard/'+c.id" mat-list-item *ngFor = "let c of categories">
+      <mat-icon mat-list-icon>account_circle</mat-icon>  {{ c.title }}
     </button>
     <button mat-list-item (click)="logout()" >
       <mat-icon mat-list-icon>logout</mat-icon> Salir

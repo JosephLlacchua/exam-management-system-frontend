@@ -33,6 +33,15 @@ export class ExamApiService extends BaseService<Exam> {
       .pipe(catchError(this.handleError));
   }
 
+  getAllExamActive() {
+    return this.http.get<Exam[]>(`${this.buildPath()}/active`, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+  getExamsByCategory(categoryId: number) {
+    return this.http.get<Exam[]>(`${this.buildPath()}/category/active/${categoryId}`, this.httpOptions)
+      .pipe(catchError(this.handleError));
+  }
+
   getAllExams() {
     return this.getAll();
   }
