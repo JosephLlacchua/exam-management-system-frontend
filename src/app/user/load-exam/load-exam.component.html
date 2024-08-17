@@ -19,7 +19,7 @@
           </mat-card-content>
           <mat-card-actions>
             <button mat-button color="primary">Ver</button>
-            <button mat-button color="accent" [routerLink] = "'/user-dashboard/instrucciones/'+e.id">Empezar</button>
+            <button mat-button color="accent" [routerLink] = "['/user-dashboard/instructions/',e.id]">Empezar</button>
             <button mat-button color="accent">Preguntas : {{ e.numberOfQuestions }}</button>
             <button mat-button color="accent">P.M : {{ e.maxPoints }}</button>
           </mat-card-actions>
