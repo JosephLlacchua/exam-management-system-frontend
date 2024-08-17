@@ -5,7 +5,7 @@ import { FormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatInputModule } from "@angular/material/input";
 import {Category} from "../../model/category.model";
-import {CategoryApiService} from "../../services/category-api.service";
+import {CategoryApiService} from "../../../services/category-api.service";
 import {Router} from "@angular/router";
 import Swal from "sweetalert2";
 import {MatSnackBar} from "@angular/material/snack-bar";

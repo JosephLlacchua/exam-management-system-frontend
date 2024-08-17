@@ -5,10 +5,10 @@ import { MatButtonModule } from "@angular/material/button";
 import { RouterLink } from "@angular/router";
 import { NgForOf, NgIf } from "@angular/common";
 import { Exam } from "../../model/exam.model";
-import { ExamApiService } from "../../services/exam-api.service";
+import { ExamApiService } from "../../../services/exam-api.service";
 import Swal from "sweetalert2";
 import { Category } from "../../model/category.model";
-import { CategoryApiService } from "../../services/category-api.service";
+import { CategoryApiService } from "../../../services/category-api.service";
 
 @Component({
   selector: 'app-view-examenes',

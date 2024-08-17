@@ -7,7 +7,7 @@ import {Router, RouterLink} from "@angular/router";
 import { MatButtonModule } from '@angular/material/button';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatCard} from "@angular/material/card";
-import {AuthenticationApiService} from "../services/authentication-api.service";
+import {AuthenticationApiService} from "../../services/authentication-api.service";
 import {User} from "../../user/model/user.model";
 import {NgIf} from "@angular/common";
 

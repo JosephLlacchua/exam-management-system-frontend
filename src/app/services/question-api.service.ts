@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {BaseService} from "../../shared/services/base.service";
-import {Question} from "../model/question.model";
+import {BaseService} from "../shared/services/base.service";
+import {Question} from "../pages/model/question.model";
 import {HttpClient} from "@angular/common/http";
-import {environment} from "../../../environments/environment";
+import {environment} from "../../environments/environment";
 import {catchError} from "rxjs";
 
 @Injectable({

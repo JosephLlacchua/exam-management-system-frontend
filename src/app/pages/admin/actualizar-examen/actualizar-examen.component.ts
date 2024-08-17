@@ -8,11 +8,11 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectModule } from '@angular/material/select';
 import { NgForOf, NgIf } from '@angular/common';
 import { Exam } from '../../model/exam.model';
-import { ExamApiService } from '../../services/exam-api.service';
+import { ExamApiService } from '../../../services/exam-api.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { Category } from '../../model/category.model';
-import { CategoryApiService } from '../../services/category-api.service';
+import { CategoryApiService } from '../../../services/category-api.service';
 
 @Component({
   selector: 'app-actualizar-examen',

@@ -10,9 +10,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { NgForOf } from '@angular/common';
 import { Category } from '../../model/category.model';
 import { Exam } from '../../model/exam.model';
-import { ExamApiService } from '../../services/exam-api.service';
+import { ExamApiService } from '../../../services/exam-api.service';
 import { Router } from '@angular/router';
-import { CategoryApiService } from '../../services/category-api.service';
+import { CategoryApiService } from '../../../services/category-api.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import Swal from 'sweetalert2';
 

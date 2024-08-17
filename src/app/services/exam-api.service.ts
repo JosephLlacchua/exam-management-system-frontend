@@ -1,8 +1,8 @@
 import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
-import { BaseService } from '../../shared/services/base.service';
-import { Exam } from '../model/exam.model';
+import { BaseService } from '../shared/services/base.service';
+import { Exam } from '../pages/model/exam.model';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
+import { environment } from '../../environments/environment';
 import { catchError, Observable } from 'rxjs';
 import { isPlatformBrowser } from '@angular/common';
 import { Router } from '@angular/router';
@@ -34,11 +34,12 @@ export class ExamApiService extends BaseService<Exam> {
   }
 
   getAllExamActive() {
+    this.setToken()
     return this.http.get<Exam[]>(`${this.buildPath()}/active`, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
-  getExamsByCategory(categoryId: number) {
-    return this.http.get<Exam[]>(`${this.buildPath()}/category/active/${categoryId}`, this.httpOptions)
+  getExamsByCategoryAndActive(categoryId: number) {
+    return this.http.get<Exam[]>(`${this.buildPath()}/category/${categoryId}/active`, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 

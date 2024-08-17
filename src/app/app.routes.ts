@@ -4,7 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { UserDashboardComponent } from './user/user-dashboard/user-dashboard.component';
 import { AdminDashboardComponent } from './pages/admin/admin-dashboard/admin-dashboard.component';
-import { AuthGuard } from './pages/services/auth-guard.service';
+import { AuthGuard } from './services/auth-guard.service';
 import { WelcomeComponent } from './pages/admin/welcome/welcome.component';
 import {ProfileComponent} from "./pages/profile/profile.component";
 import {WelcomeUserComponent} from "./user/welcome-user/welcome-user.component";
@@ -16,6 +16,9 @@ import {ActualizarPreguntaComponent} from "./pages/admin/actualizar-pregunta/act
 import {ViewExamenPreguntaComponent} from "./pages/admin/view-examen-pregunta/view-examen-pregunta.component";
 import {ActualizarExamenComponent} from "./pages/admin/actualizar-examen/actualizar-examen.component";
 import {AddPreguntaComponent} from "./pages/admin/add-pregunta/add-pregunta.component";
+import {LoadExamComponent} from "./user/load-exam/load-exam.component";
+import {InstructionsComponent} from "./user/instructions/instructions.component";
+import {StartComponent} from "./user/start/start.component";
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -48,9 +51,11 @@ export const routes: Routes = [
     children:[
       {path: '', component: WelcomeUserComponent},
       {path:'profile', component:ProfileComponent},
-    ]},
+      { path: 'catId/:catId', component: LoadExamComponent },
+      {path: 'instructions/:examId', component: InstructionsComponent},
 
-
-
+    ]
+  },
+  {path: 'start/:examId/:title', component: StartComponent},
   { path: '**', redirectTo: 'home', pathMatch: 'full' }
 ];

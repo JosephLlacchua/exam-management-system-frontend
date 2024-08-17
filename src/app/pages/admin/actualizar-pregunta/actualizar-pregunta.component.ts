@@ -8,7 +8,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
 import {CommonModule} from "@angular/common";
 import {Question} from "../../model/question.model";
-import {QuestionApiService} from "../../services/question-api.service";
+import {QuestionApiService} from "../../../services/question-api.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Exam} from "../../model/exam.model";
 import Swal from "sweetalert2";

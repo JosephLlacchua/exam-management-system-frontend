@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {MatActionList, MatListItem, MatListSubheaderCssMatStyler} from "@angular/material/list";
 import {MatIcon} from "@angular/material/icon";
 import {MatCard} from "@angular/material/card";
-import {AuthenticationApiService} from "../../services/authentication-api.service";
+import {AuthenticationApiService} from "../../../services/authentication-api.service";
 import {UserApiService} from "../../../user/services/user-api.service";
 import {RouterLink} from "@angular/router";
 

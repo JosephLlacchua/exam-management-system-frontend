@@ -4,7 +4,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatCardModule } from "@angular/material/card";
-import { AuthenticationApiService } from "../services/authentication-api.service";
+import { AuthenticationApiService } from "../../services/authentication-api.service";
 import { User } from "../../user/model/user.model";
 import Swal from 'sweetalert2';
 import { MatSnackBar } from '@angular/material/snack-bar';

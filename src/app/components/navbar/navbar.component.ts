@@ -3,7 +3,7 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from '@angular/material/icon';
 import { Router, RouterLink } from "@angular/router";
-import { AuthenticationApiService } from "../../pages/services/authentication-api.service";
+import { AuthenticationApiService } from "../../services/authentication-api.service";
 import { UserApiService } from "../../user/services/user-api.service";
 import { NgIf } from "@angular/common";
 import { Subscription } from "rxjs";

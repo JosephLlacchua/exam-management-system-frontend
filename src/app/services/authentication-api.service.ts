@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
-import { BaseService } from '../../shared/services/base.service';
+import { environment } from '../../environments/environment';
+import { BaseService } from '../shared/services/base.service';
 import { catchError, tap } from 'rxjs/operators';
-import { User } from '../../user/model/user.model';
+import { User } from '../user/model/user.model';
 import {Observable, Subject} from 'rxjs';
 
 @Injectable({

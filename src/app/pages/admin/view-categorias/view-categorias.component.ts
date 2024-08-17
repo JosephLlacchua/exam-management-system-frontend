@@ -6,7 +6,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { RouterLink } from '@angular/router';
 import { Category } from '../../model/category.model';
-import { CategoryApiService } from '../../services/category-api.service';
+import { CategoryApiService } from '../../../services/category-api.service';
 import { NgForOf } from '@angular/common';
 import {MatLine} from "@angular/material/core";
 import {MatChip} from "@angular/material/chips";

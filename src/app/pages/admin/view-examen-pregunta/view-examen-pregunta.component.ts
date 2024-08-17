@@ -10,7 +10,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {NgForOf} from '@angular/common';
 import {ActivatedRoute, RouterLink} from '@angular/router';
 import {Question} from '../../model/question.model';
-import {QuestionApiService} from '../../services/question-api.service';
+import {QuestionApiService} from '../../../services/question-api.service';
 import {MatSnackBar} from '@angular/material/snack-bar';
 import {Exam} from '../../model/exam.model';
 import Swal from "sweetalert2";

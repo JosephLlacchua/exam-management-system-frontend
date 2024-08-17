@@ -9,5 +9,6 @@ export interface Question {
   option4: string,
   correctAnswer: string,
   examId: number,
-  exam?: Exam
+  exam?: Exam,
+  selectedAnswer?: string
 }
