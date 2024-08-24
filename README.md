@@ -1,27 +1,63 @@
-# SistemaExamenesFronted
+# Examify: Revoluciona la Gestión de Exámenes
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.7.
+Examify es una aplicación web diseñada para optimizar y mejorar la experiencia de exámenes tanto para profesores como para estudiantes. Permite a los profesores crear y gestionar exámenes de manera sencilla, mientras que los estudiantes pueden realizar exámenes y seguir su progreso de forma conveniente.
 
-## Development server
+## Repositorio del Backend
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+El código del backend para este proyecto se encuentra aquí: [Repositorio Backend](https://github.com/JosephLlacchua/exam-management-system-backend)
 
-## Code scaffolding
+## Tecnologías
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**: Un potente framework para construir aplicaciones web dinámicas e interactivas.
+- **Tailwind CSS**: Un framework CSS basado en utilidades que proporciona un enfoque rápido y flexible para el estilizado.
+- **TypeScript**: Un superconjunto de JavaScript que añade tipado estático opcional para mejorar la mantenibilidad y fiabilidad del código.
+- **JavaScript**: El lenguaje de script principal utilizado para crear aplicaciones web dinámicas.
+- **npm**: El gestor de paquetes de Node, utilizado para gestionar las dependencias del proyecto.
 
-## Build
+## Comenzando
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+**Requisitos previos:**
 
-## Running unit tests
+- Node.js y npm (o yarn) instalados en tu sistema.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+**Instrucciones:**
 
-## Running end-to-end tests
+1. **Clonar el Repositorio:**
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   ```bash
+   git clone https://github.com/JosephLlacchua/examify.git
+   cd examifyEl problema parece ser que los bloques de código no están correctamente delimitados en tu archivo Markdown. Asegúrate de usar tres backticks (```) para abrir y cerrar los bloques de código. Aquí tienes el contenido corregido:
 
-## Further help
+## Instalar Dependencias:
+- npm install
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Ejecutar la Aplicación:
+- ng serve
+
+## Abrir en el Navegador:
+
+- Navega a [http://localhost:4200](http://localhost:4200) en tu navegador web para acceder a la aplicación Examify.
+
+## Uso
+
+### Para profesores:
+
+- Crea y gestiona exámenes sin esfuerzo.
+- Obtén información sobre el progreso de los estudiantes a través de resultados de exámenes e informes detallados.
+
+### Para estudiantes:
+
+- Realiza exámenes en una interfaz fácil de usar.
+- Visualiza sus resultados de exámenes y sigue su progreso a lo largo del tiempo.
+
+## Contribuciones
+
+¡Damos la bienvenida a contribuciones de la comunidad! Para contribuir, sigue estos pasos:
+
+1. Haz un fork del repositorio.
+2. Realiza tus cambios y haz commit en tu repositorio forkeado.
+3. Crea un pull request al repositorio principal.
+
+## Licencia
+
+Este proyecto está licenciado bajo la Licencia MIT. Para más detalles, consulta el archivo LICENSE dentro del repositorio.

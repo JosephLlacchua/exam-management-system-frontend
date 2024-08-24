@@ -7,8 +7,7 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
-  background: linear-gradient(180deg, rgba(25,69,107,1) 44%, rgb(50, 116, 170) 96%);
-}
+  background: linear-gradient(180deg, rgb(205, 160, 81) 44%, rgb(228, 146, 38) 96%);}
 
 .full-width{
   width: 100%;
